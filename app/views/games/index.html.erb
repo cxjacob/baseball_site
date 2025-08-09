@@ -1,0 +1,36 @@
+<div class="space-y-8">
+  <h1 class="text-2xl font-bold">試合（予定・結果）</h1>
+
+  <section class="bg-white p-6 rounded shadow">
+    <h2 class="text-xl font-semibold mb-3">今後の試合</h2>
+    <% if @upcoming.any? %>
+      <ul class="list-disc pl-6">
+        <% @upcoming.each do |g| %>
+          <li>
+            <%= g.date %>（<%= g.start_time.presence || "時間未定" %>）@ <%= g.place %> ／ vs <%= g.opponent %>
+            <%= link_to "詳細", game_path(g), class: "ml-2 underline" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="text-gray-500">予定は未定です。</p>
+    <% end %>
+  </section>
+
+  <section class="bg-white p-6 rounded shadow">
+    <h2 class="text-xl font-semibold mb-3">過去の試合</h2>
+    <% if @past.any? %>
+      <ul class="list-disc pl-6">
+        <% @past.each do |g| %>
+          <li>
+            <%= g.date %> @ <%= g.place %> ／ vs <%= g.opponent %> ／ スコア：<%= g.score || "-" %>
+            <%= link_to "詳細", game_path(g), class: "ml-2 underline" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p class="text-gray-500">まだ結果はありません。</p>
+    <% end %>
+  </section>
+</div>
+

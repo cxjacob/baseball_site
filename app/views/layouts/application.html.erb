@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>草野球チーム公式サイト</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="min-h-screen bg-gray-50 text-gray-900">
+    <nav class="border-b bg-white">
+      <div class="max-w-6xl mx-auto p-4 flex gap-6">
+        <%= link_to "ホーム", root_path,    class: "hover:underline" %>
+        <%= link_to "チーム紹介", team_path, class: "hover:underline" %>
+        <%= link_to "メンバー", members_path, class: "hover:underline" %>
+        <%= link_to "試合", games_path, class: "hover:underline" %>
+        <%= link_to "お知らせ", news_index_path, class: "hover:underline" %>
+        <%= link_to "お問い合わせ", contact_path, class: "hover:underline" %>
+      </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto p-6">
+      <%= yield %>
+    </main>
+
+    <footer class="border-t text-sm text-gray-500">
+      <div class="max-w-6xl mx-auto p-4">
+        © 草野球チーム / Links
+      </div>
+    </footer>
+  </body>
+</html>

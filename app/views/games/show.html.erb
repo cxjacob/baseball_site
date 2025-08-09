@@ -1,0 +1,14 @@
+<div class="bg-white p-6 rounded shadow space-y-2">
+  <h1 class="text-2xl font-bold"><%= @game.opponent %> 戦</h1>
+  <div>日付：<%= @game.date %>（<%= @game.start_time.presence || "時間未定" %>）</div>
+  <div>場所：<%= @game.place %></div>
+  <div>スコア：<%= @game.score || "-" %></div>
+  <% if @game.note.present? %>
+    <div class="mt-2">メモ：<%= simple_format(@game.note) %></div>
+  <% end %>
+</div>
+
+<div class="mt-4">
+  <%= link_to "試合一覧へ戻る", games_path, class: "underline" %>
+</div>
+

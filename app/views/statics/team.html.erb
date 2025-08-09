@@ -1,0 +1,68 @@
+<div class="space-y-8">
+
+  <!-- ヘッダーブロック -->
+  <section class="bg-white p-6 rounded shadow grid md:grid-cols-3 gap-6">
+    <div class="flex items-center justify-center border rounded h-36">
+      ロゴ（後で画像差し替え）
+    </div>
+    <div class="md:col-span-2">
+      <h1 class="text-2xl font-bold mb-2">○○クラブ（大阪）</h1>
+      <p class="text-gray-700">
+        中級レベル／毎週日曜午前に大阪市内で活動。全員出場を基本に、楽しく＆本気で取り組んでいます。
+      </p>
+      <div class="mt-3">
+        <%= link_to "対戦／体験の申し込み", contact_path, class: "inline-block border px-4 py-2 rounded hover:bg-gray-100" %>
+      </div>
+    </div>
+  </section>
+
+  <!-- 基本情報 -->
+  <section class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-3">活動地域・主な球場</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>大阪市内（鶴見緑地、城東スポーツセンター ほか）</li>
+        <li>公共グラウンドを中心に使用</li>
+      </ul>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-3">活動曜日・時間／費用／参加条件</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>日曜午前が中心、月2〜3試合</li>
+        <li>年会費 ○円、参加費 1回 ○円</li>
+        <li>経験：中級以上歓迎、体験参加OK</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 方針・実績 -->
+  <section class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-3">チーム方針</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>全員出場（状況に応じて守備交代）</li>
+        <li>礼儀重視・相手へのリスペクト</li>
+        <li>怪我防止のためのアップ徹底</li>
+      </ul>
+    </div>
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-3">実績</h2>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>練習試合 年○○試合</li>
+        <li>草大会：ベスト4（2024 ○○リーグ）</li>
+        <li>通算勝率：○割○分</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ギャラリー（ダミー） -->
+  <section class="bg-white p-6 rounded shadow">
+    <h2 class="text-xl font-semibold mb-3">写真ギャラリー</h2>
+    <div class="grid grid-cols-3 gap-3">
+      <div class="border rounded h-28"></div>
+      <div class="border rounded h-28"></div>
+      <div class="border rounded h-28"></div>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="bg-white p-6 rounded shadow space-y-2">
+  <div class="text-sm text-gray-500">#<%= @member.number %></div>
+  <h1 class="text-2xl font-bold"><%= @member.name %></h1>
+  <div>ポジション：<%= jp_position(@member.position) %>（<%= @member.throws_bats %>）</div>
+  <% if @member.bio.present? %>
+    <p class="mt-2"><%= @member.bio %></p>
+  <% end %>
+</div>
+
+<div class="mt-4">
+  <%= link_to "メンバー一覧へ戻る", members_path, class: "underline" %>
+</div>
+<% if @member.photo.attached? %>
+  <%= image_tag @member.photo, class: "w-48 h-48 object-cover rounded" %>
+<% else %>
+  <div class="w-48 h-48 bg-gray-200 flex items-center justify-center">No Image</div>
+<% end %>
+<% @game.photos.each do |photo| %>
+  <%= image_tag photo, class: "w-32 h-32 object-cover rounded" %>
+<% end %>
